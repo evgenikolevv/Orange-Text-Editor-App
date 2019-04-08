@@ -4,3 +4,15 @@
         width:80%;
     }
 }
+
+
+@media screen and (max-width:414px){
+   
+    #container{
+        transform: translateY(10%);
+    }
+
+    #edit{
+        height:550px;
+    }
+}
