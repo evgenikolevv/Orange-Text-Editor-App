@@ -18,6 +18,9 @@ const orderedList = document.querySelector('.ordered-list');
 const alignLeft = document.querySelector('.align-left');
 const alignCenter = document.querySelector('.align-center');
 const alignRight = document.querySelector('.align-right');
+const fontColor = document.querySelector('.font-color');
+const fontChange = document.querySelector('.font-change');
+const fontSize = document.querySelector('.font-size');
 
 Bold.addEventListener('click', function(){
     editor.execCommand('Bold', false,null);
@@ -55,6 +58,18 @@ alignRight.addEventListener('click',function(){
     changeColor(alignRight);
 });
 
+fontColor.addEventListener('change', function(e){
+    editor.execCommand('ForeColor', false, e.target.value);
+});
+
+fontChange.addEventListener('change',function(e){
+    editor.execCommand('FontName', false ,e.target.value);
+});
+
+fontSize.addEventListener('change',function(e){
+    editor.execCommand('FontSize', false ,e.target.value);
+});
+
 
 // change color of clicked buttons
 function changeColor(e){
@@ -65,3 +80,6 @@ function changeColor(e){
    e.classList.add('clicked');
     }
 }
+
+
+
