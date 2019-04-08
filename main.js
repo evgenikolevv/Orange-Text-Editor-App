@@ -1,8 +1,8 @@
- const editor = edit.document;
+ var editor = edit.document;
  editor.designMode = "on";
 
+ 
  const styleText = document.querySelector('#style-text');
-
  // style the fonts
  const fonts = document.querySelectorAll('select.font-change > option');
     for (let i = 0; i < fonts.length; i++){
