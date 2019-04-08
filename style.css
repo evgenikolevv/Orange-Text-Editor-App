@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body,html{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+#container{
+    position: relative;
+    width:800px;
+    display: block;
+    margin:0 auto;
+    transform: translateY(50%);
+}
+#ribbon{
+    position:relative;
+    width:100%;
+    margin-bottom:20px;
+    background: #00D1CD;
+    height:55px;
+    border-radius:4px;
+}
+
+#edit{
+    position: relative;
+    width:100%;
+    background:red;
+}
