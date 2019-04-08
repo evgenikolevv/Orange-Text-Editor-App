@@ -13,6 +13,7 @@
 //constants of buttons
 const Bold = document.querySelector('.bold');
 const Italic = document.querySelector('.italic');
+const underline = document.querySelector('.underline');
 const unorderedList = document.querySelector('.unordered-list');
 const orderedList = document.querySelector('.ordered-list');
 const alignLeft = document.querySelector('.align-left');
@@ -30,6 +31,11 @@ Bold.addEventListener('click', function(){
 Italic.addEventListener('click', function(){
     editor.execCommand('Italic', false,null);
     changeColor(Italic);
+});
+
+underline.addEventListener('click', function(){
+    editor.execCommand('Underline', false,null);
+    changeColor(underline);
 });
 
 unorderedList.addEventListener('click',function(){
