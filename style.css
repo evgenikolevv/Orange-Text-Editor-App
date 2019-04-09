@@ -10,8 +10,9 @@ body,html{
 }
 
 body{
-    background:url('./img/moon.jpg')no-repeat center;
-    background-size: cover;
+   /* background:url('./img/moon.jpg')no-repeat center;
+    background-size: cover;*/
+    background:linear-gradient(0deg,#fff,#D4D3D3);
     height:100vh;
     width:100%;
 }
@@ -29,23 +30,24 @@ body{
 #style-text{
     position:relative;
     width:100%;
-    margin-bottom:20px;
-    background: #00D1CD;
-    height:55px;
-    border-radius:4px;
+    margin-bottom:10px;
+    background: #EFF0F0;
+    height:40px;
+    border-radius:2px;
     display: flex;
     justify-content: start;
-    box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 5px 0.3px rgba(0,0,0,0.4);
 }
 
 #style-text button,#style-text select,#style-text input{
     background:transparent;
     height:32px;
     width:32px;
-    margin: 10px 0px 10px 5px;
+    margin: 5px 0px 5px 5px;
     border:none; 
     outline:none;
     cursor:pointer;
+    color:#333;
 }
 
 #edit{
@@ -53,13 +55,20 @@ body{
     width:100%;
     height:477px;
     background:#FFFFFF;
-    border-radius: 4px;
-    box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.2);
+    border-radius: 1px;
+    box-shadow: 0px 1px 5px 0.3px rgba(0,0,0,0.4);
  
 }
 
 /* class add to clicked */
 .clicked{
-    background: #01A8A5 !important;
+    background-color: transparent;
     border-radius: 20%;
+    animation: click 1s ease-out;
+}
+
+
+@keyframes click{
+    from {background-color: #DADADA;}
+  to {background-color:transparent;}
 }
