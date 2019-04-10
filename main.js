@@ -30,55 +30,55 @@ const fontSize = document.querySelector('.font-size');
 
 Bold.addEventListener('click', function(){
     editor.execCommand('Bold', false,null);
-    changeColor(Bold);
+    changeColor('.bold');
 });
 
 Italic.addEventListener('click', function(){
     editor.execCommand('Italic', false,null);
-    changeColor(Italic);
+    changeColor('.italic');
 });
 
 underline.addEventListener('click', function(){
     editor.execCommand('Underline', false,null);
-    changeColor(underline);
+    changeColor('.underline');
 });
 
 unorderedList.addEventListener('click',function(){
     editor.execCommand('InsertUnorderedList', false,"newOL");
-    changeColor(unorderedList);
+    changeColor('.unordered-list');
 });
 
 
 orderedList.addEventListener('click',function(){
     editor.execCommand('InsertOrderedList', false,"newOL" + Math.round(Math.random() * 1000));
-    changeColor(orderedList);
+    changeColor('.ordered-list');
 });
 
 alignLeft.addEventListener('click',function(){
     editor.execCommand('justifyLeft', false, null);
-    changeColor(alignLeft);
+    changeColor('.align-left');
 });
 
 alignCenter.addEventListener('click',function(){
     editor.execCommand('justifyCenter', false, null);
-    changeColor(alignCenter);
+    changeColor('.align-center');
 });
 
 alignRight.addEventListener('click',function(){
     editor.execCommand('justifyRight', false, null);
-    changeColor(alignRight);
+    changeColor('.align-right');
 });
 
 link.addEventListener('click', function(){
     let url = prompt("Enter a URL", "http://");
     editor.execCommand('CreateLink', false, url);
-    changeColor(link);
+    changeColor('.link');
 });
 
 insertImage.addEventListener('click', function(){
     let url = prompt("Enter a URL", "http://");
     editor.execCommand('InsertHTML', prompt('Insert Image', false, url));
-    changeColor(insertImage);
+    changeColor('.image');
 
 });
 
@@ -98,17 +98,11 @@ fontSize.addEventListener('change',function(e){
 // change color of clicked buttons
 function changeColor(e){
 
-    if (e.classList.contains('clicked')){
-        
-        e.classList.remove('clicked');
-        e.style.animation = `click 0.5s ease-in`;
-    }else{
-   e.classList.add('clicked');
-   e.style.animation = `click 0.5s ease`;
+    let element = document.querySelector(e);
+    element.classList.add('clicked');
+    setTimeout(function(){
+    element.classList.remove('clicked'); }, 500);
 
-    }
-
-  
 }
 
 

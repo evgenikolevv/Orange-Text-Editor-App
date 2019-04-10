@@ -7,11 +7,10 @@ body,html{
     box-sizing: border-box;
     margin:0;
     padding:0;
+    outline:none;
 }
 
 body{
-   /* background:url('./img/moon.jpg')no-repeat center;
-    background-size: cover;*/
     background:linear-gradient(0deg,#fff,#D4D3D3);
     height:100vh;
     width:100%;
@@ -62,13 +61,14 @@ body{
 
 /* class add to clicked */
 .clicked{
-    background-color: transparent;
+    background-color: #DADADA !important;
     border-radius: 20%;
-    animation: click 1s ease-out;
+   /*animation: click 0.2s ease-in-out ;*/
 }
 
 
 @keyframes click{
-    from {background-color: #DADADA;}
-  to {background-color:transparent;}
+    0%{background-color: #DADADA !important;
+        font-size:50px;}
+    100%{background-color:transparent !important;}
 }
