@@ -12,7 +12,7 @@ body,html{
 }
 
 body{
-    background:#D4D3D3;
+    background: #ffe79a;
     height:100vh;
     width:100%;
 }
@@ -25,17 +25,19 @@ body{
     min-width:375px;
     display: block;
     margin:0 auto;
-    transform: translateY(5%);
+    transform: translateY(2%);
 }
 #style-text{
     position:relative;
     width:100%;
+    padding: 0;
     margin-bottom:10px;
-    background: #EFF0F0;
+    /*background: #EFF0F0;*/
+    background:#ffa952;
     height:40px;
     border-radius:2px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     box-shadow: 0px 1px 5px 0.3px rgba(0,0,0,0.4);
 }
 
@@ -62,9 +64,11 @@ body{
 
 /* class add to clicked */
 .clicked{
-    background-color: #DADADA !important;
+    background-color: #ff9832 !important;
     border-radius: 20%;
 }
+
+
 
 @keyframes click{
     0%{background-color: #DADADA !important;

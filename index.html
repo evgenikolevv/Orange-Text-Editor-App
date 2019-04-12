@@ -7,48 +7,51 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Text Editor App</title>
+    <title>Orange Editor</title>
 </head>
 <body>
-
-    <div id="container">
-        <div id="style-text">
+    <div id="style-text">
           
-            <button class = "bold"><strong>B</strong></button>
-            <button class ="italic"><i>I</i></button>
-            <button class ="underline"><u>U</u></button>
-            <button class = "unordered-list"><i class="fas fa-list-ul"></i></button>
-            <button class = "ordered-list"><i class="fas fa-list-ol"></i></button>
-            <button class = "align-left"><i class="fas fa-align-left"></i></button>
-            <button class = "align-center"><i class="fas fa-align-center"></i></button>
-            <button class = "align-right"><i class="fas fa-align-right"></i></button>
-            <button class = "link"><i class="fas fa-link"></i></button>
-            <button class = "image-file"><i class="far fa-image"> </i></button>
-            <input type="color" class = "font-color" title="Change color"> 
-            <select name="" class ="font-change">
-                <option value= "Times New Roman">Times New Roman</option>
-                <option value= "Arial">Arial</option>
-                <option value= "sans-serif">Sans-serif</option>
-                <option value= "cursive">Cursive</option>
-                <option value= "Calibri">Calibri</option>
-                <option value= "Monospace">Monospace</option>
-            </select>
-            <select name="" class ="font-size">
-                <script>
-                    for(let i= 1; i <= 63; i++){
-                        document.write("<option value='"+i+"'>"+i+"</option>");
-                    }
-                </script>
-            </select>
-        </div>
+        <button class = "bold"><strong>B</strong></button>
+        <button class ="italic"><i>I</i></button>
+        <button class ="underline"><u>U</u></button>
+        <button class = "unordered-list"><i class="fas fa-list-ul"></i></button>
+        <button class = "ordered-list"><i class="fas fa-list-ol"></i></button>
+        <button class = "align-left"><i class="fas fa-align-left"></i></button>
+        <button class = "align-center"><i class="fas fa-align-center"></i></button>
+        <button class = "align-right"><i class="fas fa-align-right"></i></button>
+        <button class = "link"><i class="fas fa-link"></i></button>
+        <button class = "image-file"><i class="far fa-image"> </i></button>
+        <input type="color" class = "font-color" title="Change color"> 
+        <select name="" class ="font-change">
+            <option value= "Times New Roman">Times New Roman</option>
+            <option value= "Arial">Arial</option>
+            <option value= "sans-serif">Sans-serif</option>
+            <option value= "cursive">Cursive</option>
+            <option value= "Calibri">Calibri</option>
+            <option value= "Monospace">Monospace</option>
+        </select>
+        <select name="" class ="font-size">
+            <script>
+                for(let i= 1; i <= 63; i++){
+                    document.write("<option value='"+i+"'>"+i+"</option>");
+                }
+            </script>
+        </select>
+        <form>
+            <button class="save" type="submit" title="Save"><i class="fas fa-cloud-download-alt"></i></button>
+        </form>
+    </div>
+    <div id="container">
+      
         <iframe src="" frameborder="0" id="edit" name = "edit">
-                
         </iframe>
+       
     </div>
     <script src="main.js">
     </script>
 
 
-<p><img class="output" width="200" /></p>
+
 </body>
 </html>
