@@ -103,3 +103,6 @@ function changeColor(e){
     element.classList.remove('clicked'); }, 500);
 
 }
+
+
+// editor.body.textContent;
