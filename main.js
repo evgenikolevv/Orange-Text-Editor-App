@@ -1,9 +1,9 @@
+ 
+ 
  var editor = edit.document;
  editor.designMode = "on";
 
 
-
- 
  const styleText = document.querySelector('#style-text');
 
  // style the fonts
@@ -23,7 +23,7 @@ const alignLeft = document.querySelector('.align-left');
 const alignCenter = document.querySelector('.align-center');
 const alignRight = document.querySelector('.align-right');
 const link = document.querySelector('.link');
-const insertImage = document.querySelector('.image');
+const insertImage = document.querySelector('.image-file');
 const fontColor = document.querySelector('.font-color');
 const fontChange = document.querySelector('.font-change');
 const fontSize = document.querySelector('.font-size');
@@ -77,9 +77,8 @@ link.addEventListener('click', function(){
 
 insertImage.addEventListener('click', function(){
     let url = prompt("Enter a URL", "http://");
-    editor.execCommand('InsertHTML', prompt('Insert Image', false, url));
-    changeColor('.image');
-
+    editor.execCommand('InsertImage',false , url);   
+    changeColor('.image-file');
 });
 
 fontColor.addEventListener('change', function(e){
@@ -104,6 +103,4 @@ function changeColor(e){
     element.classList.remove('clicked'); }, 500);
 
 }
-
-
 
