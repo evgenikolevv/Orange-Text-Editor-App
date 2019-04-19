@@ -24,6 +24,7 @@ const alignCenter = document.querySelector('.align-center');
 const alignRight = document.querySelector('.align-right');
 const link = document.querySelector('.link');
 const insertImage = document.querySelector('.image-file');
+const highLight = document.querySelector('.highlight');
 const fontColor = document.querySelector('.font-color');
 const fontChange = document.querySelector('.font-change');
 const fontSize = document.querySelector('.font-size');
@@ -80,6 +81,11 @@ insertImage.addEventListener('click', function(){
     editor.execCommand('InsertImage',false , url);   
     changeColor('.image-file');
 });
+
+highLight.addEventListener('change', function(e){
+    editor.execCommand('hiliteColor',false, e.target.value);
+});
+
 
 fontColor.addEventListener('change', function(e){
     editor.execCommand('ForeColor', false, e.target.value);
