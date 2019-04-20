@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
     <title>Orange Text Editor</title>
 </head>
 <body>
@@ -39,18 +41,18 @@
                 }
             </script>
         </select>
-        <form>
+        
             <button class="save" type="submit" title="Save"><i class="fas fa-cloud-download-alt"></i></button>
-        </form>
+        
     </div>
     <div id="container">
       
-        <iframe src="" frameborder="0" id="edit" name = "edit">
+        <iframe src="" frameborder="0" id="edit" name = "edit" class = "edit">
         </iframe>
        
     </div>
-    <script src="main.js">
-    </script>
+    <script src="main.js"></script>
+    <script src="pdf.js"></script>
 
 
 

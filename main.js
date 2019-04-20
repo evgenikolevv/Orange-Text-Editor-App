@@ -28,6 +28,7 @@ const highLight = document.querySelector('.highlight');
 const fontColor = document.querySelector('.font-color');
 const fontChange = document.querySelector('.font-change');
 const fontSize = document.querySelector('.font-size');
+const save = document.querySelector('.save');
 
 Bold.addEventListener('click', function(){
     editor.execCommand('Bold', false,null);
@@ -110,5 +111,3 @@ function changeColor(e){
 
 }
 
-
-// editor.body.textContent;
