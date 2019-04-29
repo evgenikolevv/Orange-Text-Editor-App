@@ -103,11 +103,11 @@ fontSize.addEventListener('change',function(e){
 
 // change color of clicked buttons
 function changeColor(e){
-
     let element = document.querySelector(e);
     element.classList.add('clicked');
     setTimeout(function(){
     element.classList.remove('clicked'); }, 500);
-
 }
+
+
 
