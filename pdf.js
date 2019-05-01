@@ -1,10 +1,26 @@
+//jsPDF
 
+// save
 save.addEventListener('click', ()=>{
-    let  doc = new jsPDF(); 
-    let myFrame =$('.edit').contents().find('body').html();
-    console.log(myFrame); 
-    doc.fromHTML( myFrame, 0.5, 0.5,{
-       
+    var  doc = new jsPDF(); 
+    let source = $('.edit').contents().find('body').html(); 
+              
+    var elementHandler = {  '#ignorePDF': function (element, renderer) {
+    return true;
+  }
+};
+    
+doc.fromHTML(
+    source, 
+    15,
+    15,
+    {
+      'width': 180,'elementHandlers': elementHandler
     });
+   
+    
+    
+    //doc.output("test");
     doc.save('info');
+ 
 });
