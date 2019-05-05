@@ -1,8 +1,10 @@
- 
- 
- var editor = edit.document;
- editor.designMode = "on";
+ window.addEventListener('load',()=>{
+    var editor = edit.document;
+    editor.designMode = "on";
 
+    
+ 
+ 
 
  const styleText = document.querySelector('#style-text');
 
@@ -29,6 +31,7 @@ const fontColor = document.querySelector('.font-color');
 const fontChange = document.querySelector('.font-change');
 const fontSize = document.querySelector('.font-size');
 const save = document.querySelector('.save');
+const watch = document.querySelector('.watch');
 
 Bold.addEventListener('click', function(){
     editor.execCommand('Bold', false,null);
@@ -79,7 +82,9 @@ link.addEventListener('click', function(){
 
 insertImage.addEventListener('click', function(){
     let url = prompt("Enter a URL", "http://");
-    editor.execCommand('InsertImage',false , url);   
+    editor.execCommand('InsertImage',"" , url);
+    url = "" + "ID=myGif border-radius:50%";
+    
     changeColor('.image-file');
 });
 
@@ -101,6 +106,21 @@ fontSize.addEventListener('change',function(e){
 });
 
 
+
+watch.addEventListener('click',function(){
+    
+        if (editor.documentElement.contentEditable === false || editor.designMode === "off") {
+            editor.body.contentEditable='true';
+            editor.designMode='on';
+
+        } else if (editor.documentElement.contentEditable === true || editor.designMode === "on") {
+            editor.body.contentEditable='false';
+            editor.designMode='off';
+        }
+    });
+
+
+
 // change color of clicked buttons
 function changeColor(e){
     let element = document.querySelector(e);
@@ -110,4 +130,4 @@ function changeColor(e){
 }
 
 
-
+});
